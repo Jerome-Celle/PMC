@@ -5,7 +5,6 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<?php include('./php/loader.php'); ?>
 
 <div id="o-wrapper" class="o-wrapper">
 	<div id="header">

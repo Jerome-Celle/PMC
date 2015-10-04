@@ -6,10 +6,14 @@ $(document).ready(function(){
     $("input.text").keyup(function(){
         showHint();
     });
+    $("input[name=ordreTri]").click(function(){
+        showHint();
+    });
 });
 
 function showHint() {
     var ordreTri = $('input[name=ordreTri]:checked').val();
+    //$(selector).prop('checked')
     var str = $('#PMC_searchtopbar').val();
     if (str.length == 0) { 
         str = "all_movies";

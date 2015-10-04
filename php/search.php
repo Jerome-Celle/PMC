@@ -1,16 +1,19 @@
 <?php
 if (isset($_GET['q']) && $_GET['q'] != NULL) {
+
     $requete = $_GET['q'];
+    if($requete == 'all_movies'){
+        $requete = '%';
+    }
+
     if(isset($_GET['last']) && $_GET['last'] != NULL){
         $last = $_GET['last'];
     } else{
         $last = '19700101';
     }
-    $lim = "";
-    if($requete == 'all_movies'){
-        $lim = 'LIMIT 5';
-        $requete = '%';
-    }
+
+    $ordreTri = $_GET['ordreTri'];
+
     include ("connexion.php");
     //$query = "SELECT * FROM Popmoviescountdown WHERE name LIKE '%$requete%' ORDER BY dateSortie ASC";
     $query = "
@@ -20,7 +23,7 @@ if (isset($_GET['q']) && $_GET['q'] != NULL) {
             OR Popmoviescountdown.titre LIKE '%$requete%')
             AND CONCAT(Popmoviescountdown.annee,Popmoviescountdown.mois,Popmoviescountdown.jour) > '$last'
     GROUP BY Popmoviescountdown.id
-    ORDER BY annee, mois, jour ASC";
+    ORDER BY $ordreTri";
     $sth = $dbh->prepare($query);
     //$sth->bindParam(':nameMovies', $_REQUEST['requete'], PDO::PARAM_STR, 20);
     $sth->execute();

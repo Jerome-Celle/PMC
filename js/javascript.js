@@ -2,31 +2,32 @@ window.onload = function(){
     $('body').addClass('loaded');
 }
 
-function showHint(str) {
+function showHint() {
+    var ordreTri = $('input[name=ordreTri]:checked').val();
+    var str = $('#PMC_searchtopbar').val();
     if (str.length == 0) { 
-        showHint("all_movies");
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("PMC_searchresults").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("GET", "./php/search.php?q=" + str, true);
-        xmlhttp.send();
-        xmlhttp.onreadystatechange = function() {
-            var e = document.getElementById('PMC_searchresults');
-            /*On ajoute le contenu de la réponse dans le Dom du document*/
-            e.innerHTML = xmlhttp.responseText;
-            /*On évalue le javascript contenu dans les dom*/
-            var scripts = e.getElementsByTagName('script');
-            for(var i=0; i < scripts.length;i++)
-            {
-                window.eval(scripts[i].text);
-            }
-        };
+        str = "all_movies";
     }
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("PMC_searchresults").innerHTML = xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET", "./php/search.php?q=" + str + "&ordreTri=" + ordreTri, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        var e = document.getElementById('PMC_searchresults');
+        /*On ajoute le contenu de la réponse dans le Dom du document*/
+        e.innerHTML = xmlhttp.responseText;
+        /*On évalue le javascript contenu dans les dom*/
+        var scripts = e.getElementsByTagName('script');
+        for(var i=0; i < scripts.length;i++)
+        {
+            window.eval(scripts[i].text);
+        }
+    };
+    
 }
 function affiche(p_annee, p_mois, p_jour, idTable) {
     var listeMois = [[31,29,31,30,31,30,31,31,30,31,30,31],

@@ -19,14 +19,22 @@
  		  </div>
  		  <div class="row">
     	  <div id="search_bar" class="twelve columns">
-    		  <input class="u-full-width" type="text" placeholder="Que recherchez vous ?" id="PMC_searchtopbar" name="q" onkeyup="showHint(this.value)" autocomplete="off">
+    		  <input class="u-full-width" type="text" placeholder="Que recherchez vous ?" id="PMC_searchtopbar" name="q" onkeyup="showHint()" autocomplete="off">
+          <label for="ordreTri_date">
+            <input id="ordreTri_date" type="radio" name="ordreTri" value="annee, mois, jour" checked/>
+            Date
+          </label> 
+          <label for="ordreTri_alphanumeric">
+            <input id="ordreTri_alphanumeric" type="radio" name="ordreTri" value="titre"/>
+            Alphabetique
+          </label>
         </div>
 		  </div>
 	  </div>
   </div>  
   <div id="PMC_searchresults">
     <script type="text/javascript">
-      showHint("all_movies")
+      showHint()
     </script>
   </div>
 </div>

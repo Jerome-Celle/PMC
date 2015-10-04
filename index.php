@@ -20,12 +20,17 @@
  		  <div class="row">
     	  <div id="search_bar" class="twelve columns">
     		  <input class="u-full-width text" type="text" placeholder="Que recherchez vous ?" id="PMC_searchtopbar" name="q" autocomplete="off">
-          <label for="ordreTri_date">
-            <input id="ordreTri_date" type="radio" name="ordreTri" value="annee, mois, jour" checked/>
+    	  </div>
+ 		  </div>
+ 		  <div id="tri_choice" class="row">
+    	  	<div class="twelve columns">
+          <label id="tri" for="ordreTri_date">
+            <input id="ordreTri_date tri" type="radio" name="ordreTri" value="annee, mois, jour" checked/>
             Date
           </label> 
-          <label for="ordreTri_alphanumeric">
-            <input id="ordreTri_alphanumeric" type="radio" name="ordreTri" value="titre"/>
+
+          <label id="tri" for="ordreTri_alphanumeric">
+            <input id="ordreTri_alphanumeric tri" type="radio" name="ordreTri" value="titre"/>
             Alphabetique
           </label>
         </div>

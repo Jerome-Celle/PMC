@@ -2,6 +2,12 @@ window.onload = function(){
     $('body').addClass('loaded');
 }
 
+$(document).ready(function(){
+    $("input.text").keyup(function(){
+        showHint();
+    });
+});
+
 function showHint() {
     var ordreTri = $('input[name=ordreTri]:checked').val();
     var str = $('#PMC_searchtopbar').val();

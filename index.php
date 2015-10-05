@@ -14,7 +14,7 @@
       <div class="row">
         <div class="twelve columns">
  
-    		      <a  id="home_logo" href="index.php"><img src="img/dsn/Logo_1.svg" alt="logo"></a>
+    		      <a  id="home_logo" href="index.php"><img src="img/dsn/Logo_4.svg" alt="logo"></a>
     	  </div>
  		  </div>
  		  <div class="row">

@@ -22,6 +22,18 @@
         </div>
       </div>
     </div>
+    <div id="tri_choice" class="row">
+      <div class="twelve columns">
+        <label id="tri" for="ordreTri_date">
+          <input id="ordreTri_date tri" type="radio" name="ordreTri" value="annee, mois, jour" checked/>
+          Date
+        </label> 
+        <label id="tri" for="ordreTri_alphanumeric">
+          <input id="ordreTri_alphanumeric tri" type="radio" name="ordreTri" value="titre"/>
+          Alphabetique
+        </label>
+      </div>
+    </div>
   </div>  
   <div id="PMC_searchresults">
     <script type="text/javascript">

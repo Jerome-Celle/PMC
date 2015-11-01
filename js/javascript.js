@@ -3,6 +3,7 @@ window.onload = function(){
 }
 
 $(document).ready(function(){
+    $('#PMC_searchtopbar').focus();
     $("#PMC_searchtopbar").keyup(function(){
         showHint();
     });

@@ -1,32 +1,32 @@
+//source: http://thecodeplayer.com/walkthrough/matrix-rain-animation-html5-canvas-javascript
+
 function easterEggsMatrix(){
+        //création du canvas
+        $('#PMC_searchresults').html('<canvas id="c"></canvas>');
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
 
+//making the canvas full screen
+c.height = window.innerHeight;
+c.width = window.innerWidth;
 
-	var c = document.getElementById("c");
-	var ctx = c.getContext("2d");
+//chinese characters - taken from the unicode charset
+var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+//converting the string into an array of single characters
+chinese = chinese.split("");
 
-	//making the canvas full screen
-	c.height = window.innerHeight;
-	c.width = window.innerWidth;
-
-	//chinese characters - taken from the unicode charset
-	var chinese = "ムタ二コク1234567890シモラキリエスハヌトユABCDEF";
-	//converting the string into an array of single characters
-	chinese = chinese.split("");
-
-	var font_size = 10;
-	var columns = c.width/font_size; //number of columns for the rain
-	//an array of drops - one per column
-	var drops = [];
-	//x below is the x coordinate
-	//1 = y co-ordinate of the drop(same for every drop initially)
-	for(var x = 0; x < columns; x++)
-		drops[x] = 1; 
-
-	setInterval(draw,33)
-}
+var font_size = 10;
+var columns = c.width/font_size; //number of columns for the rain
+//an array of drops - one per column
+var drops = [];
+//x below is the x coordinate
+//1 = y co-ordinate of the drop(same for every drop initially)
+for(var x = 0; x < columns; x++)
+	drops[x] = 1; 
 
 //drawing the characters
-function draw()	{
+function draw()
+{
 	//Black BG for the canvas
 	//translucent BG to show trail
 	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -50,4 +50,7 @@ function draw()	{
 		//incrementing Y coordinate
 		drops[i]++;
 	}
+}
+
+setInterval(draw, 33);
 }

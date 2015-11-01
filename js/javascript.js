@@ -42,9 +42,7 @@ function showHint() {
     var str = $('#PMC_searchtopbar').val();
 
     //EasterEggs Matrix
-    if(str == 'matrix'){
-        //création du canvas
-        $('#PMC_searchresults').html('<canvas id="c"></canvas>');
+    if(str.toUpperCase() == 'MATRIX'){
         easterEggsMatrix();
     } else{
         $.ajax({

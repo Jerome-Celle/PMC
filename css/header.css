@@ -58,11 +58,10 @@ input.marvel:-ms-input-placeholder {
 
 input#PMC_searchtopbar.starwars{
 	background: #25272c;
-	/*background: #FFE81F;*/
+   color: #FFE81F;
 	}
 
 input.starwars::-webkit-input-placeholder {
-   /*color: #464749;*/
 	color: #FFE81F;
 }
 

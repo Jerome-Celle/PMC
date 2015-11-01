@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <link rel="stylesheet" href="css/header.css">
   
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,8 +30,7 @@
   <script type="text/javascript" src="./js/viewportchecker.js"></script> 
   <script type="text/javascript" src="./js/jquery.ba-throttle-debounce.js"></script>
   <script type="text/javascript" src="./js/javascript.js"></script>
-  
-
+  <script type="text/javascript" src="./js/cercle.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

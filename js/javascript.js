@@ -3,26 +3,48 @@ window.onload = function(){
 }
 
 $(document).ready(function(){
-    $("input.text").keyup(function(){
+    $("#PMC_searchtopbar").keyup(function(){
         showHint();
     });
     $("input[name=ordreTri]").click(function(){
         showHint();
+    });
+
+    var togglePmc_searchResults = false;
+    $('#search_option').click(function(){
+        $('#tri_choice').slideToggle(600);
+        if(togglePmc_searchResults){
+            $('#PMC_searchresults').animate({'padding-top': '195px'},600);
+            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
+            togglePmc_searchResults = false            
+        }else{
+            $('#PMC_searchresults').animate({'padding-top': '225px'},600);
+            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
+            togglePmc_searchResults = true
+        }
+    });
+
+    $('#search_option').mouseenter(function(){
+        $(this).attr('src', 'img/dsn/PMC_icn_search_option_marvel.svg');
+    });
+    $('#search_option').mouseleave(function(){
+        if(togglePmc_searchResults){
+            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
+        }else{
+            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
+        }
     });
 });
 
 function showHint() {
     var ordreTri = $('input[name=ordreTri]:checked').val();
     //$(selector).prop('checked')
-    var str = $('#PMC_searchtopbar').val();
-    if (str.length == 0) { 
-        str = "all_movies";
-    }
+    var str = $('#PMC_searchtopbar').val();   
 
     $.ajax({
-        url: './php/search.php',
-        type: 'get',
-        data: 'q=' + str + '&ordreTri=' + ordreTri,
+        url: './search.php',
+        type: 'post',
+        data: 'q=' + str + '&ordreTri=' + ordreTri + '&tagPage=' + tagPage,
         success: function(data) {
             var e = document.getElementById("PMC_searchresults");
             e.innerHTML = data;
@@ -34,7 +56,7 @@ function showHint() {
         }
     });
 }
-function affiche(p_annee, p_mois, p_jour, idTable) {
+function affiche(p_annee, p_mois, p_jour, idDiv) {
     var listeMois = [[31,29,31,30,31,30,31,31,30,31,30,31],
     [31,28,31,30,31,30,31,31,30,31,30,31],
     [31,28,31,30,31,30,31,31,30,31,30,31],
@@ -76,18 +98,17 @@ function affiche(p_annee, p_mois, p_jour, idTable) {
     }
 
     var keyWordYear = nbYears < 2 ?'ANNÉE' : 'ANNÉES';
-    var keyWordMonth = nbMois < 2 ?'MOIS' : 'MOIS';
-    var keyWordDay = nbJours < 2 ?'JOUR' : 'JOURS';
+    var keyWordDay  = nbJours < 2 || p_jour == 99 ?'JOUR' : 'JOURS';
 
     if(p_mois == 99){
         nbMois = "?";
     } 
-    if(p_mois == 99){
+    if(p_jour == 99){
         nbJours = "?";
     }
 
 
-    document.getElementById(idTable).innerHTML = "<table id='countdown_table'>"+
+    $(idDiv).html("<table id='countdown_table'>"+
     "<tbody>" +
     "<tr>" +
     "<td><h1>" + nbYears + "</h1></td>" +
@@ -95,13 +116,13 @@ function affiche(p_annee, p_mois, p_jour, idTable) {
     "<td><h1>" + nbJours + "</h1></td>" +
     "</tr>" +
     "<tr>" +
-    "<td><h6>"+keyWordYear+"</h6></td>" +
-    "<td><h6>"+keyWordMonth+"</h6></td>" +
-    "<td><h6>"+keyWordDay+"</h6></td>" +
+    "<td><h6>" + keyWordYear + "</h6></td>" +
+    "<td><h6>" + "Mois" + "</h6></td>" +
+    "<td><h6>" + keyWordDay + "</h6></td>" +
     "</tr>" +
     "</tbody>" +
-    "</table>";
-    actualisation = window.setTimeout(affiche, 1000*60*60, p_annee, p_mois, p_jour, idTable);
+    "</table>");
+    actualisation = window.setTimeout(affiche, 1000*60*60, p_annee, p_mois, p_jour, idDiv);
 }
 
 function infiniteScroll(){

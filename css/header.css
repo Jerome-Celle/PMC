@@ -1,0 +1,105 @@
+/* Index */
+#header.accueil{
+	background: #603782;
+}
+
+
+input#PMC_searchtopbar.accueil{
+	background: #43265a;
+}
+
+input.accueil::-webkit-input-placeholder {
+   color: #7c4aa3;
+}
+
+input.accueil:-moz-placeholder { /* Firefox 18- */
+   color: #7c4aa3;  
+}
+
+input.accueil::-moz-placeholder {  /* Firefox 19+ */
+   color: #7c4aa3;  
+}
+
+input.accueil:-ms-input-placeholder {  
+   color: #7c4aa3;  
+}
+
+
+/* Marvel */
+#header.marvel{
+	background: #AB0D1A;
+}
+
+input#PMC_searchtopbar.marvel{
+	background: #820A14;
+}
+
+input.marvel::-webkit-input-placeholder {
+   color: #FF404D;
+}
+
+input.marvel:-moz-placeholder { /* Firefox 18- */
+   color: #FF404D;  
+}
+
+input.marvel::-moz-placeholder {  /* Firefox 19+ */
+   color: #FF404D;  
+}
+
+input.marvel:-ms-input-placeholder {  
+   color: #FF404D;  
+}
+
+
+/* Star Wars */
+#header.starwars{
+	background: #111216;
+}
+
+input#PMC_searchtopbar.starwars{
+	background: #25272c;
+	/*background: #FFE81F;*/
+	}
+
+input.starwars::-webkit-input-placeholder {
+   /*color: #464749;*/
+	color: #FFE81F;
+}
+
+input.starwars:-moz-placeholder { /* Firefox 18- */
+   color: #FFE81F;  
+}
+
+input.starwars::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFE81F;  
+}
+
+input.starwars:-ms-input-placeholder {  
+   color: #FFE81F;  
+}
+
+
+/* Dc Comics */
+#header.dccomics{
+	background: #156ba9;
+}
+
+input#PMC_searchtopbar.dccomics{
+	background: #0e5686;
+	}
+
+input.dccomics::-webkit-input-placeholder {
+   color: #5ca3d6;
+}
+
+input.dccomics:-moz-placeholder { /* Firefox 18- */
+   color: #5ca3d6;  
+}
+
+input.dccomics::-moz-placeholder {  /* Firefox 19+ */
+   color: #5ca3d6;  
+}
+
+input.dccomics:-ms-input-placeholder {  
+   color: #5ca3d6;  
+}

@@ -123,7 +123,7 @@ function affiche(p_annee, p_mois, p_jour, idDiv) {
     "</tr>" +
     "<tr>" +
     "<td><h6>" + keyWordYear + "</h6></td>" +
-    "<td><h6>" + "Mois" + "</h6></td>" +
+    "<td><h6>" + "MOIS" + "</h6></td>" +
     "<td><h6>" + keyWordDay + "</h6></td>" +
     "</tr>" +
     "</tbody>" +

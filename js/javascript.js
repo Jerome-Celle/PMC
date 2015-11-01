@@ -39,22 +39,29 @@ $(document).ready(function(){
 function showHint() {
     var ordreTri = $('input[name=ordreTri]:checked').val();
     //$(selector).prop('checked')
-    var str = $('#PMC_searchtopbar').val();   
+    var str = $('#PMC_searchtopbar').val();
 
-    $.ajax({
-        url: './search.php',
-        type: 'post',
-        data: 'q=' + str + '&ordreTri=' + ordreTri + '&PortailPage=' + PortailPage,
-        success: function(data) {
-            var e = document.getElementById("PMC_searchresults");
-            e.innerHTML = data;
-            var scripts = e.getElementsByTagName('script');
-            for(var i=0; i < scripts.length;i++)
-            {
-                window.eval(scripts[i].text);
+    //EasterEggs Matrix
+    if(str == 'matrix'){
+        //création du canvas
+        $('#PMC_searchresults').html('<canvas id="c"></canvas>');
+        easterEggsMatrix();
+    } else{
+        $.ajax({
+            url: './search.php',
+            type: 'post',
+            data: 'q=' + str + '&ordreTri=' + ordreTri + '&PortailPage=' + PortailPage,
+            success: function(data) {
+                var e = document.getElementById("PMC_searchresults");
+                e.innerHTML = data;
+                var scripts = e.getElementsByTagName('script');
+                for(var i=0; i < scripts.length;i++)
+                {
+                    window.eval(scripts[i].text);
+                }
             }
-        }
-    });
+        });
+    }
 }
 function affiche(p_annee, p_mois, p_jour, idDiv) {
     var listeMois = [[31,29,31,30,31,30,31,31,30,31,30,31],

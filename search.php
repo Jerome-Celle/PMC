@@ -3,12 +3,12 @@ if (isset($_POST['q'])) {
 
     $requete = $_POST['q'];
 
-    $tagPage = $_POST['tagPage'];
+    $PortailPage = $_POST['PortailPage'];
 
-    if($tagPage == 'all_movies'){
-        $condTag = "1 = 1";
+    if($PortailPage == 'all_movies'){
+        $Portail = "1 = 1";
     } else{
-        $condTag = "Tag.nameTag = '$tagPage'";
+        $Portail = "Portail.namePortail = '$PortailPage'";
     }
 
     if(isset($_POST['last']) && $_POST['last'] != NULL){
@@ -19,16 +19,24 @@ if (isset($_POST['q'])) {
 
     $ordreTri = $_POST['ordreTri'];
 
+    $dbLangue = 'MoviesFR';
+
     include ("connexion.php");
-    //$query = "SELECT * FROM Popmoviescountdown WHERE name LIKE '%$requete%' ORDER BY dateSortie ASC";
     $query = "
-    SELECT Popmoviescountdown.* 
-    FROM Popmoviescountdown, Tag 
-    WHERE Popmoviescountdown.tag = Tag.idTag 
-            AND (Tag.nameTag = '$requete' OR Popmoviescountdown.titre LIKE '%$requete%')
-            AND CONCAT(Popmoviescountdown.annee,Popmoviescountdown.mois,Popmoviescountdown.jour) > '$last'
-            AND $condTag
-    GROUP BY Popmoviescountdown.id
+    SELECT $dbLangue.* 
+    FROM $dbLangue
+        LEFT JOIN LinkMoviesTag
+        ON $dbLangue.id = LinkMoviesTag.idMovies
+        INNER JOIN Tag
+        ON LinkMoviesTag.idTag = Tag.idTag
+        LEFT JOIN LinkMoviesPortail
+        ON $dbLangue.id = LinkMoviesPortail.idMovies
+        INNER JOIN Portail
+        ON LinkMoviesPortail.idPortail = Portail.idPortail
+    WHERE (Tag.nameTag = '$requete' OR $dbLangue.titre LIKE '%$requete%')
+          AND CONCAT($dbLangue.annee,$dbLangue.mois,$dbLangue.jour) > '$last'
+          AND $Portail
+    GROUP BY $dbLangue.id
     ORDER BY $ordreTri";
 
     $sth = $dbh->prepare($query);

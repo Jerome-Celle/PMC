@@ -4,7 +4,7 @@
    <body>
 
       <script type="text/javascript">
-         var tagPage = 'Marvel';
+         var PortailPage = 'Marvel';
       </script>
 
       

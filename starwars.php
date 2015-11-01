@@ -4,7 +4,7 @@
    <body>
 
       <script type="text/javascript">
-         var tagPage = 'Star Wars';
+         var PortailPage = 'Star Wars';
       </script>
       
 

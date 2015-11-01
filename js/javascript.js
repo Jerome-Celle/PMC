@@ -44,7 +44,7 @@ function showHint() {
     $.ajax({
         url: './search.php',
         type: 'post',
-        data: 'q=' + str + '&ordreTri=' + ordreTri + '&tagPage=' + tagPage,
+        data: 'q=' + str + '&ordreTri=' + ordreTri + '&PortailPage=' + PortailPage,
         success: function(data) {
             var e = document.getElementById("PMC_searchresults");
             e.innerHTML = data;

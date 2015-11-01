@@ -4,7 +4,7 @@
 		
 	<body>
 	<script type="text/javascript">
-	var tagPage = 'all_movies';
+	var PortailPage = 'all_movies';
 	</script>
 
 	<?php include('./loader.php'); ?>

@@ -4,7 +4,7 @@
    <body>
 
       <script type="text/javascript">
-         var tagPage = 'DC Comics';
+         var PortailPage = 'DC Comics';
       </script>
 
 

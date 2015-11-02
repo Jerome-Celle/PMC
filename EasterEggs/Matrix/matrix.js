@@ -13,7 +13,7 @@ $('canvas#c').css('position','absolute')
 $('#header').css('background','rgba(0,0,0,0)');
 $('input#PMC_searchtopbar').css('background','#000000').css('color','#0F0');
 c.height = window.innerHeight + 500;
-c.width = window.innerWidth;
+c.width = $('#header').width();
 
 //chinese characters - taken from the unicode charset
 var chinese = "ムタ二コク1234567890シモラキリエスハヌトユABCDEF";

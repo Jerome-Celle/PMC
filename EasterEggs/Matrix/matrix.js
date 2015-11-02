@@ -7,7 +7,12 @@ var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 
 //making the canvas full screen
-c.height = window.innerHeight;
+$('canvas#c').css('position','absolute')
+			.css('top',0)
+			.css('left',0);
+$('#header').css('background','rgba(0,0,0,0)');
+$('input#PMC_searchtopbar').css('background','#000000').css('color','#0F0');
+c.height = window.innerHeight + 500;
 c.width = window.innerWidth;
 
 //chinese characters - taken from the unicode charset

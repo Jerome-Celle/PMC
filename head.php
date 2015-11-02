@@ -31,7 +31,9 @@
   <script type="text/javascript" src="./js/jquery.ba-throttle-debounce.js"></script>
   <script type="text/javascript" src="./js/javascript.js"></script>
   <script type="text/javascript" src="./js/cercle.js"></script>
+  <!--EasterEggs -->
   <script type="text/javascript" src="./EasterEggs/Matrix/matrix.js"></script>
+  <script type="text/javascript" src="./EasterEggs/R2D2Sound/R2D2sound.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -49,7 +49,9 @@ function showHint() {
     //EasterEggs Matrix
     if(str.toUpperCase() == 'MATRIX'){
         easterEggsMatrix();
-    } else{
+    } else if(str.toUpperCase() == 'R2D2'){
+        R2D2Sound();
+    }else{
         $.ajax({
             url: './search.php',
             type: 'post',

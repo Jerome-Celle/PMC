@@ -80,25 +80,25 @@ input.starwars:-ms-input-placeholder {
 
 /* Dc Comics */
 #header.dccomics{
-	background: #156ba9;
+	background: #365492;
 }
 
 input#PMC_searchtopbar.dccomics{
-	background: #0e5686;
+	background: #283f6d;
 	}
 
 input.dccomics::-webkit-input-placeholder {
-   color: #5ca3d6;
+   color: #5686e8;
 }
 
 input.dccomics:-moz-placeholder { /* Firefox 18- */
-   color: #5ca3d6;  
+   color: #5686e8;  
 }
 
 input.dccomics::-moz-placeholder {  /* Firefox 19+ */
-   color: #5ca3d6;  
+   color: #5686e8;  
 }
 
 input.dccomics:-ms-input-placeholder {  
-   color: #5ca3d6;  
+   color: #5686e8;  
 }

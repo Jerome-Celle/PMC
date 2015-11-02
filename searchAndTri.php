@@ -10,7 +10,7 @@
          <div class="row">
             <div id="search_bar" class="twelve columns">
                <input class="u-full-width <?php echo $mainStyle?>" type="text" placeholder="<?php echo $placeHolderHeader?>" id="PMC_searchtopbar" name="q" onkeyup="" autocomplete="off"/>
-               <img id="search_option" src="<?php echo $imageSearchOption?>" width="25px;"/>
+               <img id="search_option" src="img/dsn/PMC_icn_search_option.svg" width="25px;"/>
             </div>
          </div>
       </div>

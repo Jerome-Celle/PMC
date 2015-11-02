@@ -12,7 +12,10 @@
 		<?php
 	  $mainStyle = "marvel";		 
     $placeHolderHeader = "Que cherchez-vous?";
-    $imageHeader = array('img/dsn/PMC_logo_marvel_w.svg');
+    $imageHeader = array('img/dsn/logos/marvel/PMC_decli_avengers_w.svg',
+                         'img/dsn/logos/marvel/PMC_decli_captain_w.svg',
+                         'img/dsn/logos/marvel/PMC_decli_shield_w.svg',
+                         'img/dsn/logos/marvel/PMC_decli_ironman_w.svg');
     $imageSearchOption = 'img/dsn/PMC_icn_search_option_marvel.svg';
     include('./searchAndTri.php');
     ?>

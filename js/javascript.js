@@ -1,3 +1,4 @@
+var lastValueSearch = '';
 window.onload = function(){
     $('body').addClass('loaded');
 }
@@ -5,7 +6,10 @@ window.onload = function(){
 $(document).ready(function(){
     $('#PMC_searchtopbar').focus();
     $("#PMC_searchtopbar").keyup(function(){
-        showHint();
+        if(lastValueSearch != $(this).val()){
+            lastValueSearch = $(this).val();
+            showHint();
+        }
     });
     $("input[name=ordreTri]").click(function(){
         showHint();
@@ -15,7 +19,7 @@ $(document).ready(function(){
     $('#search_option').click(function(){
         $('#tri_choice').slideToggle(600);
         if(togglePmc_searchResults){
-            $('#PMC_searchresults').animate({'padding-top': '195px'},600);
+            $('#PMC_searchresults').animate({'padding-top': '190px'},600);
             $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
             togglePmc_searchResults = false            
         }else{
@@ -25,7 +29,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#search_option').mouseenter(function(){
+    /*$('#search_option').mouseenter(function(){
         $(this).attr('src', 'img/dsn/PMC_icn_search_option_marvel.svg');
     });
     $('#search_option').mouseleave(function(){
@@ -34,7 +38,7 @@ $(document).ready(function(){
         }else{
             $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
         }
-    });
+    });*/
 });
 
 function showHint() {
@@ -45,7 +49,9 @@ function showHint() {
     //EasterEggs Matrix
     if(str.toUpperCase() == 'MATRIX'){
         easterEggsMatrix();
-    } else{
+    } else if(str.toUpperCase() == 'R2D2'){
+        R2D2Sound();
+    }else{
         $.ajax({
             url: './search.php',
             type: 'post',

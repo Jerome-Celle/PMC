@@ -44,7 +44,7 @@ if (isset($_POST['q'])) {
     $sth->execute();
     while ($obj = $sth->fetch(PDO::FETCH_OBJ)) {
         ?>
-        <div id="<?php echo $obj->annee . $obj->mois . $obj->jour?>" class="bg post" style="background-image: url('img/movimg/<?php echo $obj->name?>.png'); background-size: cover; background-position: center center;"> 
+        <div id="<?php echo $obj->annee . $obj->mois . $obj->jour?>" class="bg post" style="background-image: url('img/movimg/<?php echo $obj->name?>.png'); background-size: cover; background-position: center top;"> 
             <div id="movie" class="container">
                 <div class="row">
                     <h4><?php echo $obj->titre?></h4>

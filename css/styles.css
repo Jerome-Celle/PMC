@@ -245,17 +245,25 @@ a.c-menu__link{
 	text-align: left;
 	position: relative;
 	margin-left: 10px;
+	cursor: pointer;  
+	}
+
+#search_option:hover{ 
+	   animation-delay: .2s;
+	animation:bounceIn .6s linear;
 }
 
-#search_option:hover{
-	cursor: pointer;   
+/*@keyframes bounceIn {
+        0%{ transform: scale(1);}
+        75%{ transform: scale(1.2);}
+        100%{ transform: scale(1);}
 }
-
-
-
+*/
 /* TRI CHOICE */
 
 #tri_choice{
+	position: relative;
+	top: 5px;
 	background-color: #252525;
 	height: 35px;
 	display: none;
@@ -299,7 +307,7 @@ a.c-menu__link{
 }
 
 #movie.container h4{
-	padding-top: 30px;
+	padding-top: 50px;
 	text-shadow: 0 0 7px rgba(0,0,0, 0.9);
 }
 

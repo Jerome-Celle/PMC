@@ -1,3 +1,4 @@
+var lastValueSearch = '';
 window.onload = function(){
     $('body').addClass('loaded');
 }
@@ -5,7 +6,10 @@ window.onload = function(){
 $(document).ready(function(){
     $('#PMC_searchtopbar').focus();
     $("#PMC_searchtopbar").keyup(function(){
-        showHint();
+        if(lastValueSearch != $(this).val()){
+            lastValueSearch = $(this).val();
+            showHint();
+        }
     });
     $("input[name=ordreTri]").click(function(){
         showHint();

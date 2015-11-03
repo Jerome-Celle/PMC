@@ -1,34 +1,34 @@
-<form action="action_page.php" method="post">
+<form action="addMovies.php" method="post">
     <fieldset>
 	    <legend>Nom BDD:</legend>
-		<input type="text" name="nameFR" value="">
+		<input type="text" name="name" value="">
 	</fieldset>
 	<fieldset>
 	    <legend>FR:</legend>
-		Nom FR:
-		<input type="text" name="nameFR" value="">
+		Titre FR:
+		<input type="text" name="titreFR" value="">
 		
 		Date Label FR:
-		<input type="text" name="nameFR" value="">
+		<input type="text" name="dateSortieFR" value="">
 		
 		Date FR:
-		<input type="text" name="nameFR" value="">
-		<input type="text" name="nameFR" value="">
-		<input type="text" name="nameFR" value="">
+		<input type="text" name="anneeFR" value="">
+		<input type="text" name="moisFR" value="">
+		<input type="text" name="joursFR" value="">
 	
 	</fieldset>
 	<fieldset>
 	    <legend>US:</legend>
-		Nom US:
-		<input type="text" name="nameFR" value="">
+		Titre US:
+		<input type="text" name="titreUS" value="">
 		
 		Date Label US:
-		<input type="text" name="nameFR" value="">
+		<input type="text" name="dateSortieUS" value="">
 		
 		Date US:
-		<input type="text" name="nameFR" value="">
-		<input type="text" name="nameFR" value="">
-		<input type="text" name="nameFR" value="">
+		<input type="text" name="anneeUS" value="">
+		<input type="text" name="moisUS" value="">
+		<input type="text" name="joursUS" value="">
 	
 	</fieldset>
 	<fieldset>

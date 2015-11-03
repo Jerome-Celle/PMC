@@ -11,7 +11,7 @@
 	<?php include('./loader.php'); ?>
 		<?php
 	   $mainStyle = "starwars";  
-    $placeHolderHeader = "C3PO, que puisse-je pour vous?";
+    $placeHolderHeader = "C3PO, que puis-je pour vous?";
     $imageHeader = array('img/dsn/logos/starwars/PMC_decli_swempire_w.svg',
                          'img/dsn/logos/starwars/PMC_decli_swfirstorder_w.svg',
                          'img/dsn/logos/starwars/PMC_decli_sw_jedi_w.svg',

@@ -1,8 +1,10 @@
 //source: http://thecodeplayer.com/walkthrough/matrix-rain-animation-html5-canvas-javascript
 
 function easterEggsMatrix(){
+
         //création du canvas
         $('#PMC_searchresults').html('<canvas id="c"></canvas>');
+
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 
@@ -10,8 +12,6 @@ var ctx = c.getContext("2d");
 $('canvas#c').css('position','absolute')
 			.css('top',0)
 			.css('left',0);
-$('#header').css('background','rgba(0,0,0,0)');
-$('input#PMC_searchtopbar').css('background','#000000').css('color','#0F0');
 c.height = window.innerHeight + 500;
 c.width = $('#header').width();
 

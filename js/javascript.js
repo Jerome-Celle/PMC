@@ -1,8 +1,9 @@
-var lastValueSearch = '';
+
 window.onload = function(){
     $('body').addClass('loaded');
 }
 
+var lastValueSearch = '';
 $(document).ready(function(){
     $('#PMC_searchtopbar').focus();
     $("#PMC_searchtopbar").keyup(function(){
@@ -41,13 +42,30 @@ $(document).ready(function(){
     });*/
 });
 
+var topMatrix = false;
+var styleHeaderBackground;
+var styleSearchBackground;
+var styleSearchColor;
 function showHint() {
     var ordreTri = $('input[name=ordreTri]:checked').val();
     //$(selector).prop('checked')
     var str = $('#PMC_searchtopbar').val();
 
     //EasterEggs Matrix
-    if(str.toUpperCase() == 'MATRIX'){
+    if(topMatrix){
+        $('#header').css('background',styleHeaderBackground);
+        $('input#PMC_searchtopbar').css('background',styleSearchBackground).css('color',styleSearchColor);  
+        topMatrix = false;      
+    }
+    if(str.toUpperCase() == 'MATRIX'){        
+        //style header
+        styleHeaderBackground = $('#header').css('background');
+        styleSearchBackground = $('input#PMC_searchtopbar').css('background');
+        styleSearchColor = $('input#PMC_searchtopbar').css('color');
+
+        $('#header').css('background','rgba(0,0,0,0)');
+        $('input#PMC_searchtopbar').css('background','#000000').css('color','#0F0');
+        topMatrix = true;
         easterEggsMatrix();
     } else if(str.toUpperCase() == 'R2D2'){
         R2D2Sound();

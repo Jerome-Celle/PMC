@@ -21,25 +21,19 @@ $(document).ready(function(){
         $('#tri_choice').slideToggle(600);
         if(togglePmc_searchResults){
             $('#PMC_searchresults').animate({'padding-top': '190px'},600);
-            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
-            togglePmc_searchResults = false            
+            $(this).fadeToggle(30).attr('src', 'img/dsn/PMC_icn_search_option.svg').fadeToggle(30);
+            togglePmc_searchResults = false;
         }else{
             $('#PMC_searchresults').animate({'padding-top': '225px'},600);
-            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
-            togglePmc_searchResults = true
+            $(this).fadeToggle(30).attr('src', 'img/dsn/PMC_icn_search_lessoption.svg').fadeToggle(30);
+            togglePmc_searchResults = true;
         }
     });
 
-    /*$('#search_option').mouseenter(function(){
-        $(this).attr('src', 'img/dsn/PMC_icn_search_option_marvel.svg');
+    $('#search_option').mouseover(function(){
+        $(this).fadeToggle(300).fadeToggle(300);
     });
-    $('#search_option').mouseleave(function(){
-        if(togglePmc_searchResults){
-            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
-        }else{
-            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
-        }
-    });*/
+
 });
 
 var topMatrix = false;
@@ -69,6 +63,8 @@ function showHint() {
         easterEggsMatrix();
     } else if(str.toUpperCase() == 'R2D2'){
         R2D2Sound();
+    } else if(str.toUpperCase() == 'C3PO'){
+        C3POSound();
     }else{
         $.ajax({
             url: './search.php',

@@ -1,20 +1,20 @@
 <form action="addMovies.php" method="post">
     <fieldset>
 	    <legend>Nom BDD:</legend>
-		<input type="text" name="name" value="">
+		<input type="text" name="name" value="" placeholder="Champs id, etc..">
 	</fieldset>
 	<fieldset>
 	    <legend>FR:</legend>
 		Titre FR:
-		<input type="text" name="titreFR" value="">
+		<input type="text" name="titreFR" value="" placeholder="Titre au propre">
 		
 		Date Label FR:
-		<input type="text" name="dateSortieFR" value="">
+		<input type="text" name="dateSortieFR" value="" placeholder="Date à afficher">
 		
 		Date FR:
-		<input type="text" name="anneeFR" value="">
-		<input type="text" name="moisFR" value="">
-		<input type="text" name="joursFR" value="">
+		<input type="text" name="anneeFR" value="" placeholder="année">
+		<input type="text" name="moisFR" value="" placeholder="mois">
+		<input type="text" name="joursFR" value="" placeholder="jours">
 	
 	</fieldset>
 	<fieldset>
@@ -33,7 +33,7 @@
 	</fieldset>
 	<fieldset>
     <legend>Portail et Tag:</legend>
-		<select name="Portail">
+		<select name="portail">
 				<?php 
 				include ("connexion.php");
 			    $query = "
@@ -46,7 +46,8 @@
 			    }
 				?>
 		</select>
-		<select name="Tag">
+		<select name="tag">
+				<option value='no_tag'>Pas de tag</option>
 				<?php 
 				include ("connexion.php");
 			    $query = "

@@ -1,27 +1,27 @@
 /* Index */
 #header.accueil{
-	background: #603782;
+	background: #533c70;
 }
 
 
 input#PMC_searchtopbar.accueil{
-	background: #43265a;
+	background: #423059;
 }
 
 input.accueil::-webkit-input-placeholder {
-   color: #7c4aa3;
+   color: #805dad;
 }
 
 input.accueil:-moz-placeholder { /* Firefox 18- */
-   color: #7c4aa3;  
+   color: #805dad;  
 }
 
 input.accueil::-moz-placeholder {  /* Firefox 19+ */
-   color: #7c4aa3;  
+   color: #805dad;  
 }
 
 input.accueil:-ms-input-placeholder {  
-   color: #7c4aa3;  
+   color: #805dad;  
 }
 
 
@@ -49,7 +49,6 @@ input.marvel::-moz-placeholder {  /* Firefox 19+ */
 input.marvel:-ms-input-placeholder {  
    color: #FF404D;  
 }
-
 
 /* Star Wars */
 #header.starwars{
@@ -80,25 +79,25 @@ input.starwars:-ms-input-placeholder {
 
 /* Dc Comics */
 #header.dccomics{
-	background: #365492;
+	background: #2D4D86;
 }
 
 input#PMC_searchtopbar.dccomics{
-	background: #283f6d;
+	background: #233c68;
 	}
 
 input.dccomics::-webkit-input-placeholder {
-   color: #5686e8;
+   color: #3f6dbd;
 }
 
 input.dccomics:-moz-placeholder { /* Firefox 18- */
-   color: #5686e8;  
+   color: #3f6dbd;  
 }
 
 input.dccomics::-moz-placeholder {  /* Firefox 19+ */
-   color: #5686e8;  
+   color: #3f6dbd;  
 }
 
 input.dccomics:-ms-input-placeholder {  
-   color: #5686e8;  
+   color: #3f6dbd;  
 }

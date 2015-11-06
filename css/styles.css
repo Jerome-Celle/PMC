@@ -13,16 +13,12 @@ html{
 	left: -10px;
 }
 
-
-/**
- * Menu overview.
- */
 .c-menu {
   position: fixed;
   z-index: 200;
-  background-color: #222222;
+  background-color: #212121;
   transition: transform 0.3s;
-  	box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 .c-menu__items {
@@ -32,17 +28,39 @@ html{
   color: #fff;
 }
 
-.c-menu__items li:first-child{
-	border-bottom: none;
+
+li.c-menu__item#menuhome{
+	background-color: #533c70;
 }
 
-.c-menu__items li{
-	border-bottom: 2px solid #2e2e2e;	
+li.c-menu__item#menumarvel{
+	background-color: #AB0D1A;
 }
 
-/**
- * Close button resets.
- */
+li.c-menu__item#menuDC{
+	background-color: #2D4D86;
+}
+
+li.c-menu__item#menusw{
+	background-color: #111216;
+}
+
+li.c-menu__item#menuhome:hover{
+	background-color: #3f2d57;
+}
+
+li.c-menu__item#menumarvel:hover{
+	background-color: #8d0e19;
+}
+
+li.c-menu__item#menuDC:hover{
+	background-color: #203a67;
+}
+
+li.c-menu__item#menusw:hover{
+	background-color: #2f3240;
+}
+
 .c-menu__close {
   background-color: #0e0e0e;
   font-size: 14px;
@@ -56,35 +74,16 @@ html{
   height: 50px;
 }
 
-#b_menu_close button:hover{
-	transform:rotate(360deg);
-	-ms-transform:rotate(360deg); /* IE 9 */
-	-moz-transform:rotate(360deg); /* Firefox */
-	-webkit-transform:rotate(360deg); /* Safari and Chrome */
-	-o-transform:rotate(360deg); /* Opera */
 
-}
-
-/**
- * Close button resets.
- */
 .c-menu__close:focus {
   outline: none;
 }
 
-/**
- * Body states.
- *
- * When a menu is active, we want to hide the overflows on the body to prevent
- * awkward document scrolling.
- */
+
 body.has-active-menu {
   overflow: hidden;
 }
 
-/**
- * Mask component
- */
 
 .c-mask {
   position: fixed;
@@ -106,65 +105,47 @@ body.has-active-menu {
   transition: opacity 0.3s;
 }
 
-.c-menu--slide-left,
-.c-menu--slide-right,
-.c-menu--push-left,
-.c-menu--push-right {
+.c-menu--slide-left {
   width: 100%;
   height: 100%;
 }
 
 @media all and (min-width: 320px) {
-  .c-menu--slide-left,
-  .c-menu--slide-right,
-  .c-menu--push-left,
-  .c-menu--push-right {
+  .c-menu--slide-left {
     width: 300px;
   }
 }
 
-.c-menu--slide-left .c-menu__item,
-.c-menu--slide-right .c-menu__item,
-.c-menu--push-left .c-menu__item,
-.c-menu--push-right .c-menu__item {
+.c-menu--slide-left .c-menu__item {
   display: block;
   text-align: center;
 }
 
-.c-menu--slide-left .c-menu__link,
-.c-menu--slide-right .c-menu__link,
-.c-menu--push-left .c-menu__link,
-.c-menu--push-right .c-menu__link {
+.c-menu--slide-left .c-menu__link {
   display: block;
-  padding: 12px 24px;
+  padding: 24px 24px;
   color: #fff;
 }
 
-.c-menu--slide-left .c-menu__close,
-.c-menu--slide-right .c-menu__close,
-.c-menu--push-left .c-menu__close,
-.c-menu--push-right .c-menu__close {
+.c-menu--slide-left .c-menu__close {
   display: block;
   padding: 12px 24px;
   width: 100%;
 }
 
-.c-menu--slide-left,
-.c-menu--push-left {
+.c-menu--slide-left {
   top: 0;
   left: 0;
   transform: translateX(-100%);
 }
 
 @media all and (min-width: 320px) {
-  .c-menu--slide-left,
-  .c-menu--push-left {
+  .c-menu--slide-left{
     transform: translateX(-300px);
   }
 }
 
-.c-menu--slide-left.is-active,
-.c-menu--push-left.is-active {
+.c-menu--slide-left.is-active {
   transform: translateX(0);
 }
 
@@ -172,8 +153,9 @@ body.has-active-menu {
 a.c-menu__link{
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 800;
 	font-size: 14px;
+	letter-spacing: 4px;
 }
 
 /* HEADER */
@@ -248,10 +230,10 @@ a.c-menu__link{
 	cursor: pointer;  
 	}
 
-#search_option:hover{ 
+/*#search_option:hover{ 
 	   animation-delay: .2s;
 	animation:bounceIn .6s linear;
-}
+}*/
 
 /*@keyframes bounceIn {
         0%{ transform: scale(1);}
@@ -307,7 +289,7 @@ a.c-menu__link{
 }
 
 #movie.container h4{
-	padding-top: 50px;
+	padding-top: 30px;
 	text-shadow: 0 0 7px rgba(0,0,0, 0.9);
 }
 

@@ -17,11 +17,11 @@
 		<?php
 			$mainStyle = "starwars";  
 			$placeHolderHeader = "C3PO, que puis-je pour vous?";
-			$imageHeader = array('img/dsn/logos/starwars/PMC_decli_swempire_w.svg',
-								'img/dsn/logos/starwars/PMC_decli_swfirstorder_w.svg',
-								'img/dsn/logos/starwars/PMC_decli_sw_jedi_w.svg',
-								'img/dsn/logos/starwars/PMC_decli_sw_sith_w.svg',
-								'img/dsn/logos/starwars/PMC_decli_swrebel_w.svg');
+			$imageHeader = array('img/dsn/logos/starwars/SPGG_decli_swempire_w.svg',
+								'img/dsn/logos/starwars/SPGG_decli_swfirstorder_w.svg',
+								'img/dsn/logos/starwars/SPGG_decli_sw_jedi_w.svg',
+								'img/dsn/logos/starwars/SPGG_decli_sw_sith_w.svg',
+								'img/dsn/logos/starwars/SPGG_decli_swrebel_w.svg');
 			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
 			include('./header.php');
 		?>

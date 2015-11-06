@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
-		$headTitle = 'SupaGog.urss';
+		$headTitle = 'SupaGog.staline';
 		$headDescritpion = '';
 		$headAuthor = '';
 		include('./head.php'); 

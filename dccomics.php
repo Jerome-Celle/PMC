@@ -17,9 +17,9 @@
 		<?php
 			$mainStyle = "dccomics";		 
 			$placeHolderHeader = "Que cherchez-vous sur Batman?";
-			$imageHeader = array('img/dsn/logos/dc/PMC_decli_batman_w.svg',
-										'img/dsn/logos/dc/PMC_decli_greenlantern_w.svg',
-										'img/dsn/logos/dc/PMC_decli_superman_w.svg');
+			$imageHeader = array('img/dsn/logos/dc/SPGG_decli_batman_w.svg',
+										'img/dsn/logos/dc/SPGG_decli_greenlantern_w.svg',
+										'img/dsn/logos/dc/SPGG_decli_superman_w.svg');
 			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
 			include('./header.php');
 		?>

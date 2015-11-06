@@ -30,35 +30,35 @@ html{
 
 
 li.c-menu__item#menuhome{
-	background-color: #533c70;
+	background-color: #604581;
 }
 
 li.c-menu__item#menumarvel{
-	background-color: #AB0D1A;
+	background-color: #BE0F1E;
 }
 
 li.c-menu__item#menuDC{
-	background-color: #2D4D86;
+	background-color: #3E5FA9;
 }
 
 li.c-menu__item#menusw{
-	background-color: #111216;
+	background-color: #1E242A;
 }
 
 li.c-menu__item#menuhome:hover{
-	background-color: #3f2d57;
+	background-color: #43315B;
 }
 
 li.c-menu__item#menumarvel:hover{
-	background-color: #8d0e19;
+	background-color: #910B17;
 }
 
 li.c-menu__item#menuDC:hover{
-	background-color: #203a67;
+	background-color: #2D447A;
 }
 
 li.c-menu__item#menusw:hover{
-	background-color: #2f3240;
+	background-color: #394550;
 }
 
 .c-menu__close {

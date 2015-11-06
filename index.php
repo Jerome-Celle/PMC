@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
-		$headTitle = 'SupaGog.staline';
+		$headTitle = 'SupaGog.com';
 		$headDescritpion = '';
 		$headAuthor = '';
 		include('./head.php'); 
@@ -16,7 +16,7 @@
 		<?php 
 			$mainStyle = "accueil";
 			$placeHolderHeader = "Que recherchez-vous?";
-			$imageHeader = array('img/dsn/PMC_logo_w.svg');
+			$imageHeader = array('img/dsn/SPGG_logo_w.svg');
 			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
 			include('./header.php');
 		?>

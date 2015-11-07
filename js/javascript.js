@@ -29,9 +29,9 @@ $(document).ready(function(){
             togglePmc_searchResults = true;
         }
     });
-
-    $('#search_option').mouseover(function(){
-        $(this).fadeToggle(300).fadeToggle(300);
+    $('#c_menu_info').click(function(){
+        $('#menuabout').slideToggle(300);
+        $('.c-menu__item').fadeToggle(300);
     });
 
 });

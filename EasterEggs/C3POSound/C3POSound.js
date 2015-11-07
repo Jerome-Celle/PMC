@@ -3,5 +3,6 @@ function C3POSound(){
   									'<source src="./EasterEggs/C3POSound/IAMC3PO.mp3" type="audio/mp3">' +
   									'<source src="./EasterEggs/C3POSound/IAMC3PO.ogg" type="audio/ogg">' +
 								 '</audio>');
+	document.getElementById('EasterEggsC3POSound').volume = 0.6;
 	document.getElementById('EasterEggsC3POSound').play();
 }

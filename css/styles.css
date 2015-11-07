@@ -368,6 +368,13 @@ table{
 	text-shadow: 0 0 7px rgba(0,0,0, 0.9);
 }
 
+/* PAGE PROPOSITIONS FILMS */
+
+body#proposit{
+background: #604581;
+height: 100%; }
+
+
 /* ANIMATE */
 .hidden{
 	opacity: 0;
@@ -518,3 +525,5 @@ table{
     -webkit-transition: all 0.3s 0.3s ease-out; 
             transition: all 0.3s 0.3s ease-out;
 }
+
+

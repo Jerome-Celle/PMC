@@ -5,13 +5,13 @@ window.onload = function(){
 
 var lastValueSearch = '';
 $(document).ready(function(){
-    $('#PMC_searchtopbar').focus();
-    $("#PMC_searchtopbar").keyup(function(){
+
+    $("#PMC_searchtopbar").keyup($.debounce( 250,function(){
         if(lastValueSearch != $(this).val()){
             lastValueSearch = $(this).val();
             showHint();
         }
-    });
+    }));
     $("input[name=ordreTri]").click(function(){
         showHint();
     });

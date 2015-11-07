@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
-		$headTitle = '';
+		$headTitle = 'Supagog.com - Univers DC Comics';
 		$headDescritpion = '';
 		$headAuthor = '';
 		include('./head.php'); 

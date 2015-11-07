@@ -1,5 +1,7 @@
 <div id="loader-wrapper">
-	<div id="loader">	
+	<div id="loader">
+	<img src="img/dsn/SPGG_logo_w.svg" width="150px"/>
+
 		<div id="anim_loader" class="twelve columns">
 	</div>
 </div>

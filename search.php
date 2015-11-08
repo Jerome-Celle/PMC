@@ -37,7 +37,7 @@ if (isset($_POST['q'])) {
           AND CONCAT($dbLangue.annee,$dbLangue.mois,$dbLangue.jour) > '$last'
           AND $Portail
     GROUP BY $dbLangue.id
-    ORDER BY $ordreTri";
+    ORDER BY $ordreTri LIMIT 5";
 
     $sth = $dbh->prepare($query);
     //$sth->bindParam(':nameMovies', $_REQUEST['requete'], PDO::PARAM_STR, 20);
@@ -52,22 +52,12 @@ if (isset($_POST['q'])) {
                 <div class="row">
                     <h6 id="datemov"><em><?php echo $obj->dateSortie?></em></h6>
                 </div>
-                <div id="<?php echo "" . $obj->name ?>" class="row">
+                <div id="<?php echo $obj->name ?>" class="row">
                 </div>
             </div>
             <script>affiche("<?php echo $obj->annee?>","<?php echo $obj->mois?>","<?php echo $obj->jour?>", "<?php echo 'div#' . $obj->name ?>");</script>                        
         </div>
         <?php    
     }
-    ?>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.post').addClass("hidden").viewportChecker({
-          classToAdd: 'visible animated fadeInUp', // Class to add to the elements when they are visible
-            offset: 100    
-          });   
-        });            
-    </script>
-    <?php
 }
 ?>

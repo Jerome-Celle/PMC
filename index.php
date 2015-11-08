@@ -21,9 +21,10 @@
 			include('./header.php');
 		?>
 		<div id="PMC_searchresults">
-			<script type="text/javascript">
-				showHint()
-			</script>
+			<?php
+			$Portail = 'all_movies';
+			include('./firstSearch.php');
+			?>
 		</div>
 
 		<?php include('./navbar.php') ?>

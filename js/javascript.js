@@ -1,10 +1,15 @@
 
-window.onload = function(){
+$(window).load(function(){
     $('body').addClass('loaded');
-}
+});
 
 var lastValueSearch = '';
 $(document).ready(function(){
+
+    $('.post').addClass("hidden").viewportChecker({
+        classToAdd: 'visible animated fadeInUp', // Class to add to the elements when they are visible
+        offset: 100    
+    });
 
     $("#PMC_searchtopbar").keyup($.debounce( 250,function(){
         if(lastValueSearch != $(this).val()){
@@ -12,6 +17,7 @@ $(document).ready(function(){
             showHint();
         }
     }));
+
     $("input[name=ordreTri]").click(function(){
         showHint();
     });
@@ -21,17 +27,63 @@ $(document).ready(function(){
         $('#tri_choice').slideToggle(600);
         if(togglePmc_searchResults){
             $('#PMC_searchresults').animate({'padding-top': '190px'},600);
-            $(this).fadeToggle(30).attr('src', 'img/dsn/PMC_icn_search_option.svg').fadeToggle(30);
+            $(this).attr('src', 'img/dsn/PMC_icn_search_option.svg');
             togglePmc_searchResults = false;
         }else{
             $('#PMC_searchresults').animate({'padding-top': '225px'},600);
-            $(this).fadeToggle(30).attr('src', 'img/dsn/PMC_icn_search_lessoption.svg').fadeToggle(30);
+            $(this).attr('src', 'img/dsn/PMC_icn_search_lessoption.svg');
             togglePmc_searchResults = true;
         }
     });
     $('#c_menu_info').click(function(){
         $('#menuabout').slideToggle(300);
         $('.c-menu__item').fadeToggle(300);
+    });
+
+    var load = false;
+
+    $(window).scroll(function(){ // On surveille l'évènement scroll
+ 
+        if(($(window).height() + $(window).scrollTop() >= $(document).height() - 500) && !load){
+
+            load = true;
+  
+            //On récupère l'id du dernier commentaire affiché
+            var last_id = $('.bg:last').attr('id');
+
+            var ajaxData = 'q=' + $('#PMC_searchtopbar').val() + 
+                        '&ordreTri=' + $('input[name=ordreTri]:checked').val() + 
+                        '&PortailPage=' + PortailPage + 
+                        '&last=' + last_id;
+  
+            //On lance la fonction ajax
+            $.ajax({
+                url: './search.php',
+                type: 'post',
+                data: ajaxData,
+ 
+                //Succès de la requête
+                success: function(data) {
+                     $('#PMC_searchresults').append(data);
+
+                    $('.post').addClass("hidden").viewportChecker({
+                        classToAdd: 'visible animated fadeInUp', // Class to add to the elements when they are visible
+                        offset: 100    
+                    }); 
+
+                     load = false;
+
+                    var e = document.getElementById("PMC_searchresults");
+                    var scripts = e.getElementsByTagName('script');
+                    for(var i=0; i < scripts.length;i++)
+                    {
+                        window.eval(scripts[i].text);
+                    }
+                }
+            });
+        }
+ 
+ 
     });
 
 });
@@ -78,6 +130,12 @@ function showHint() {
                 {
                     window.eval(scripts[i].text);
                 }
+
+                $('.post').addClass("hidden").viewportChecker({
+                    classToAdd: 'visible animated fadeInUp', // Class to add to the elements when they are visible
+                    offset: 100    
+                }); 
+
             }
         });
     }

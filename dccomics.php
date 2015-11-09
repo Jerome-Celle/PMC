@@ -18,8 +18,7 @@
 			$mainStyle = "dccomics";		 
 			$placeHolderHeader = "Que cherchez-vous sur Batman?";
 			$directory = './img/dsn/logos/dc/';
-			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
-			$imageHeader = array_splice($arrayTemp, 0, 2);
+			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');
 		?>
 

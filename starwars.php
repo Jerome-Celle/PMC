@@ -18,9 +18,7 @@
 			$mainStyle = "starwars";  
 			$placeHolderHeader = "C3PO, que puis-je pour vous?";
 			$directory = './img/dsn/logos/starwars/';
-			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
-			$imageHeader = array_splice($arrayTemp, 0, 2);
-			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
+			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');
 		?>
 

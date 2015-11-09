@@ -18,8 +18,7 @@
 			$mainStyle = "marvel";		 
 			$placeHolderHeader = "Que cherchez-vous?";
 			$directory = './img/dsn/logos/marvel/';
-			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
-			$imageHeader = array_splice($arrayTemp, 0, 2);
+			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');
 		?>
 

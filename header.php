@@ -4,7 +4,7 @@
          <button id="c-button--slide-left"><img id="b_menu" class="c-button" src="img/dsn/PMC_icn_menu.svg" style="width: 30px;"></button>
          <div class="row">
             <div class="twelve columns">
-               <a id="home_logo" href=""><img src="<?php echo($imageHeader[rand(0,sizeOf($imageHeader)-1)])?>" alt="logo"></a>
+               <a id="home_logo" href=""><img src="<?php echo($directory.$imageHeader[rand(0,sizeOf($imageHeader)-1)])?>" alt="logo"></a>
             </div>
          </div>
          <div class="row">

@@ -37,6 +37,14 @@
 	<script type="text/javascript" src="./EasterEggs/Matrix/matrix.js"></script>
 	<script type="text/javascript" src="./EasterEggs/R2D2Sound/R2D2sound.js"></script>
 	<script type="text/javascript" src="./EasterEggs/C3POSound/C3POSound.js"></script>
+	<script type="text/javascript">
+		//génération du tableau de toutes les images présentes dans img/movimg
+		var arrayImage = <?php 
+				$arrayTemp = array_diff(scandir('./img/movimg/'), array('..', '.'));
+				$array = array_splice($arrayTemp, 0, 2);
+				echo json_encode($arrayTemp);?>;
+	</script>
+
 
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->

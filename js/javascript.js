@@ -1,6 +1,15 @@
 
+
 $(window).load(function(){
     $('body').addClass('loaded');
+    //essai chargement de toute les images en fond
+
+    var image = new Image();
+    var cpt;
+    var len = arrayImage.length;
+    for (cpt = 0; cpt < len; cpt++){
+        image.src = './img/movimg/' + arrayImage[cpt];    
+    }
 });
 
 var lastValueSearch = '';
@@ -59,7 +68,7 @@ $(document).ready(function(){
             //On lance la fonction ajax
             $.ajax({
                 url: './search.php',
-                type: 'post',
+                type: 'get',
                 data: ajaxData,
  
                 //Succès de la requête
@@ -120,7 +129,7 @@ function showHint() {
     }else{
         $.ajax({
             url: './search.php',
-            type: 'post',
+            type: 'get',
             data: 'q=' + str + '&ordreTri=' + ordreTri + '&PortailPage=' + PortailPage,
             success: function(data) {
                 var e = document.getElementById("PMC_searchresults");

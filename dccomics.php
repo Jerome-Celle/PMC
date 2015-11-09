@@ -17,17 +17,17 @@
 		<?php
 			$mainStyle = "dccomics";		 
 			$placeHolderHeader = "Que cherchez-vous sur Batman?";
-			$imageHeader = array('img/dsn/logos/dc/SPGG_decli_batman_w.svg',
-										'img/dsn/logos/dc/SPGG_decli_greenlantern_w.svg',
-										'img/dsn/logos/dc/SPGG_decli_superman_w.svg');
-			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
+			$directory = './img/dsn/logos/dc/';
+			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
+			$imageHeader = array_splice($arrayTemp, 0, 2);
 			include('./header.php');
 		?>
 
 		<div id="PMC_searchresults">
-			<script type="text/javascript">
-				showHint("DC Comics")
-			</script>
+			<?php
+			$Portail = 'DC Comics';
+			include('./firstSearch.php');
+			?>
 		</div>
 
 		<?php include('navbar.php') ?>

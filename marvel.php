@@ -17,18 +17,17 @@
 		<?php
 			$mainStyle = "marvel";		 
 			$placeHolderHeader = "Que cherchez-vous?";
-			$imageHeader = array('img/dsn/logos/marvel/SPGG_decli_avengers_w.svg',
-								'img/dsn/logos/marvel/SPGG_decli_captain_w.svg',
-								'img/dsn/logos/marvel/SPGG_decli_shield_w.svg',
-								'img/dsn/logos/marvel/SPGG_decli_ironman_w.svg');
-			$imageSearchOption = 'img/dsn/PMC_icn_search_option_marvel.svg';
+			$directory = './img/dsn/logos/marvel/';
+			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
+			$imageHeader = array_splice($arrayTemp, 0, 2);
 			include('./header.php');
 		?>
 
 		<div id="PMC_searchresults">
-			<script type="text/javascript">
-				showHint()
-			</script>
+			<?php
+			$Portail = 'Marvel';
+			include('./firstSearch.php');
+			?>
 		</div>
 
 		<?php include('navbar.php') ?>

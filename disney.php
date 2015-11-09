@@ -17,14 +17,17 @@
 		<?php
 			$mainStyle = "disney";		 
 			$placeHolderHeader = "Que cherchez-vous?";
-			$imageHeader = array();
+			$directory = './img/dsn/logos/disney/';
+			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
+			$imageHeader = array_splice($arrayTemp, 0, 2);
 			include('./header.php');
 		?>
 
 		<div id="PMC_searchresults">
-			<script type="text/javascript">
-				showHint()
-			</script>
+			<?php
+			$Portail = 'Disney';
+			include('./firstSearch.php');
+			?>
 		</div>
 
 		<?php include('navbar.php') ?>

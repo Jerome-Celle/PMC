@@ -17,19 +17,18 @@
 		<?php
 			$mainStyle = "starwars";  
 			$placeHolderHeader = "C3PO, que puis-je pour vous?";
-			$imageHeader = array('img/dsn/logos/starwars/SPGG_decli_swempire_w.svg',
-								'img/dsn/logos/starwars/SPGG_decli_swfirstorder_w.svg',
-								'img/dsn/logos/starwars/SPGG_decli_sw_jedi_w.svg',
-								'img/dsn/logos/starwars/SPGG_decli_sw_sith_w.svg',
-								'img/dsn/logos/starwars/SPGG_decli_swrebel_w.svg');
+			$directory = './img/dsn/logos/starwars/';
+			$arrayTemp = array_diff(scandir($directory), array('..', '.'));
+			$imageHeader = array_splice($arrayTemp, 0, 2);
 			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
 			include('./header.php');
 		?>
 
 		<div id="PMC_searchresults">
-			<script type="text/javascript">
-				showHint("Star Wars")
-			</script>
+			<?php
+			$Portail = 'Star Wars';
+			include('./firstSearch.php');
+			?>
 		</div>
 
 		<?php include('navbar.php') ?>

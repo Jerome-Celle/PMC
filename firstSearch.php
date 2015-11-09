@@ -6,7 +6,7 @@ $dbLangue = 'MoviesFR';
 if($Portail == 'all_movies'){
     $Portail = "1 = 1";
 } else{
-    $Portail = "Portail.namePortail = '$PortailPage'";
+    $Portail = "Portail.namePortail = '$Portail'";
 }
 
 include ("connexion.php");
@@ -21,6 +21,7 @@ WHERE CONCAT($dbLangue.annee,$dbLangue.mois,$dbLangue.jour) > '$last'
       AND $Portail
 GROUP BY $dbLangue.id
 ORDER BY annee, mois, jour LIMIT 5;";
+
 $sth = $dbh->prepare($query);
 //$sth->bindParam(':nameMovies', $_REQUEST['requete'], PDO::PARAM_STR, 20);
 $sth->execute();

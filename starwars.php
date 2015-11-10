@@ -2,6 +2,7 @@
 <html lang="fr">
 	<?php  
 			$Portail = 'Star Wars';
+		$colorPortail = '#1E242A'; 
 		$headTitle = 'Supagog.com - Univers Star Wars';
 		$headDescritpion = '';
 		$headAuthor = '';

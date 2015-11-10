@@ -11,6 +11,12 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="<?php echo $colorPortail ?>">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="<?php echo $colorPortail ?>">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $colorPortail ?>">
 
 	<!-- FONT
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -31,21 +37,19 @@
 	<script type="text/javascript" src="./js/viewportchecker.js"></script> 
 	<script type="text/javascript" src="./js/jquery.ba-throttle-debounce.js"></script>
 	<script type="text/javascript" src="./js/javascript.js"></script>
-	<script type="text/javascript" src="./js/cercle.js"></script>
-	
-	<!--EasterEggs -->
-	<script type="text/javascript" src="./EasterEggs/Matrix/matrix.js"></script>
-	<script type="text/javascript" src="./EasterEggs/R2D2Sound/R2D2sound.js"></script>
-	<script type="text/javascript" src="./EasterEggs/C3POSound/C3POSound.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="./js/cercle.js"></script><script type="text/javascript">
 		//génération du tableau de toutes les images présentes dans img/movimg
 		var arrayImage = <?php 
 				$arrayTemp = array_diff(scandir('./img/movimg/'), array('..', '.'));
 				$array = array_splice($arrayTemp, 0, 2);
 				echo json_encode($arrayTemp);?>;
 	</script>
-
-
+	
+	<!--EasterEggs -->
+	<script type="text/javascript" src="./EasterEggs/Matrix/matrix.js"></script>
+	<script type="text/javascript" src="./EasterEggs/R2D2Sound/R2D2sound.js"></script>
+	<script type="text/javascript" src="./EasterEggs/C3POSound/C3POSound.js"></script>
+	
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/dsn/favicon/apple-touch-icon-57x57.png" />

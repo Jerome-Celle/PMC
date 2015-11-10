@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php 
-			$Portail = 'DC Comics'; 
+			$Portail = 'DC Comics';
+		$colorPortail = '#2D447A'; 
 		$headTitle = 'Supagog.com - Univers DC Comics';
 		$headDescritpion = '';
 		$headAuthor = '';

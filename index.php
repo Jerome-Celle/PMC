@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
-			$Portail = 'all_movies';
+		$Portail = 'all_movies';
+		$colorPortail = '#604581';
 		$headTitle = 'Supagog.com';
 		$headDescritpion = '';
 		$headAuthor = '';

@@ -101,3 +101,28 @@ input.starwars::-moz-placeholder {  /* Firefox 19+ */
 input.starwars:-ms-input-placeholder {  
    color: #FFE81F;  
 }
+
+/* Disney */
+#header.disney{
+	background: #57A5DA;
+}
+
+input#PMC_searchtopbar.disney{
+	background: #3E769C;
+	}
+
+input.disney::-webkit-input-placeholder {
+	color: #acd7f4;
+}
+
+input.disney:-moz-placeholder { /* Firefox 18- */
+   color: #acd7f4;  
+}
+
+input.disney::-moz-placeholder {  /* Firefox 19+ */
+   color: #acd7f4;  
+}
+
+input.disney:-ms-input-placeholder {  
+   color: #acd7f4;  
+}

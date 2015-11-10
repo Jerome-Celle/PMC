@@ -35,7 +35,7 @@
     <legend>Portail et Tag:</legend>
 		<select name="portail">
 				<?php 
-				include ("connexion.php");
+				include ("../connexion.php");
 			    $query = "
 			    SELECT * 
 			    FROM Portail";
@@ -49,7 +49,7 @@
 		<select name="tag">
 				<option value='no_tag'>Pas de tag</option>
 				<?php 
-				include ("connexion.php");
+				include ("../connexion.php");
 			    $query = "
 			    SELECT * 
 			    FROM Tag";

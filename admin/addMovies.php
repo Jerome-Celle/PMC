@@ -23,7 +23,7 @@ if(isset($_POST['name'])){
 	$portail = $_POST['portail'];
 
 
-	include ("connexion.php");
+	include ("../connexion.php");
     $query = "
 	INSERT INTO MoviesFR (name, dateSortie, titre, annee, mois, jour)
 	VALUES ('$name', '$dateSortieFR' ,'$titreFR', '$anneeFR' ,'$moisFR' ,'$joursFR' );";

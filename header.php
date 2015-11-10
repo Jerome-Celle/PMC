@@ -2,13 +2,18 @@
 include('./arrayTitre.php');
 $index;
 $titre;
-$placeholder = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
-array_splice($arrayTitre, 2, 1);
-$titre = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
-array_splice($arrayTitre, 2, 1);
+$index = rand(0,sizeOf($arrayTitre)-1);
+$placeholder = $arrayTitre[$index];
+array_splice($arrayTitre, $index, 1);
+
+$index = rand(0,sizeOf($arrayTitre)-1);
+$titre = $arrayTitre[$index];
+array_splice($arrayTitre, $index, 1);
 $placeholder = $placeholder . ', ' . $titre;
-$titre = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
-array_splice($arrayTitre, 2, 1);
+
+$index = rand(0,sizeOf($arrayTitre)-1);
+$titre = $arrayTitre[$index];
+array_splice($arrayTitre, $index, 1);
 $placeholder = $placeholder . ', ' . $titre . ', ...';
 
 ;?>

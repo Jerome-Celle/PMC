@@ -4,8 +4,16 @@
     </button>
     <ul class="c-menu__items">
         <li id="menuabout" style="display:none">
-            <h6>Design by <a href="http://www.nokte.fr" alt="Site internet Nokte.fr">Nokté</a></h6>
-            <h6>Code by Celui Qui Baille</h6>
+        	<img src="img/dsn/SPGG_logo_w.svg" alt="logo Supagog" width="150px"/></br></br></br>
+        	<p>
+	        [ <em>Super</em> + <em>Agog</em> ]</br></br>
+	        Supagog.com a été conçu pour les fans impatients, par deux fans impatients qui en avaient marre de parcourir internet à la recherche des dates de sorties de leurs films préférés.</br></br>
+        	Design by <a href="http://www.nokte.fr" alt="Site internet Nokte.fr"><em>Nokté</em></a></br>
+        	Code by <em>Celui Qui Baille</em></br></br>
+        	<a href="mailto:supagog@nokte.fr" alt="Mail Supagog@nokte.fr"><em>supagog@nokte.fr</em></a></br>
+        	<a href="https://twitter.com/Supagogcom" alt="Twitter Supgagog.com"><em>@SupagogCOM</em></a></br></br>
+        	Supagog.com - 2015
+            </p>
         </li>
         <li class="c-menu__item" id="menuhome">
             <a href="index.php" class="c-menu__link">Accueil</a>

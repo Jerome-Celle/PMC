@@ -50,7 +50,7 @@ li.c-menu__item#menudisney{
 }
 
 li.c-menu__item#menupropos{
-	background-color: #252525;
+	background-color: #4c4c4c;
 }
 
 li.c-menu__item#menuhome:hover{
@@ -101,21 +101,30 @@ li.c-menu__item#menupropos:hover{
 }
 
 li.c-menu__item#menupropos:hover a{
-	color:#252525;
+	color:#4c4c4C;
 }
+
 
 li#menuabout{
-	left: 25px;
+width: 100%;
 }
 
-li#menuabout h6{
-	margin-bottom: -5px;
-	color: #424242;
+li#menuabout img{
+	position: absolute;
+	left: 75px;
 }
 
-li#menuabout h6 a{
-	text-decoration: underline;
-	color: #424242;
+li#menuabout p{
+	top: 100px;
+	text-align: center;
+	color: #ffffff;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+li#menuabout p a{
+	text-decoration: none;
+	color: #adadad;
 }
 
 #c_menu_info{

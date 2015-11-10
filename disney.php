@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
+			$Portail = 'Disney';
 		$headTitle = 'Supagog.com - Univers Disney';
 		$headDescritpion = '';
 		$headAuthor = '';
@@ -16,7 +17,7 @@
 		<?php include('./loader.php'); ?>
 		<?php
 			$mainStyle = "disney";		 
-			$placeHolderHeader = "Que cherchez-vous?";
+			$placeHolderHeader = array("Que cherchez-vous?");
 			$directory = './img/dsn/logos/disney/';
 			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');

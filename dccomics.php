@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<?php  
+	<?php 
+			$Portail = 'DC Comics'; 
 		$headTitle = 'Supagog.com - Univers DC Comics';
 		$headDescritpion = '';
 		$headAuthor = '';
@@ -16,7 +17,7 @@
 		<?php include('./loader.php'); ?>
 		<?php
 			$mainStyle = "dccomics";		 
-			$placeHolderHeader = "Que cherchez-vous sur Batman?";
+			$placeHolderHeader = array("Que cherchez-vous sur Batman?");
 			$directory = './img/dsn/logos/dc/';
 			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');

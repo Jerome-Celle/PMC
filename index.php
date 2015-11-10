@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
+			$Portail = 'all_movies';
 		$headTitle = 'Supagog.com';
 		$headDescritpion = '';
 		$headAuthor = '';
@@ -15,9 +16,9 @@
 		<?php include('./loader.php'); ?>
 		<?php 
 			$mainStyle = "accueil";
-			$placeHolderHeader = "Que recherchez-vous?";
-			$imageHeader = array('img/dsn/SPGG_logo_w.svg');
-			$imageSearchOption = 'img/dsn/PMC_icn_search_option.svg';
+			$placeHolderHeader = array("Que recherchez-vous?");
+			$directory = './img/dsn/';
+			$imageHeader = array('SPGG_logo_w.svg');
 			include('./header.php');
 		?>
 		<div id="PMC_searchresults">

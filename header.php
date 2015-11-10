@@ -1,3 +1,17 @@
+<?php 
+include('./arrayTitre.php');
+$index;
+$titre;
+$placeholder = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
+array_splice($arrayTitre, 2, 1);
+$titre = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
+array_splice($arrayTitre, 2, 1);
+$placeholder = $placeholder . ', ' . $titre;
+$titre = $arrayTitre[rand(0,sizeOf($arrayTitre)-1)];
+array_splice($arrayTitre, 2, 1);
+$placeholder = $placeholder . ', ' . $titre . ', ...';
+
+;?>
 <div id="o-wrapper" class="o-wrapper">
    <div id="header" class="<?php echo $mainStyle?>">
       <div  class="container">
@@ -9,7 +23,7 @@
          </div>
          <div class="row">
             <div id="search_bar" class="twelve columns">
-               <input class="u-full-width <?php echo $mainStyle?>" type="text" placeholder="<?php echo $placeHolderHeader?>" id="PMC_searchtopbar" name="q" onkeyup="" autocomplete="off"/>
+               <input class="u-full-width <?php echo $mainStyle?>" type="text" placeholder="<?php echo ($placeholder)?>" id="PMC_searchtopbar" name="q" onkeyup="" autocomplete="off"/>
                <img id="search_option" src="img/dsn/PMC_icn_search_option.svg" width="25px;"/>
             </div>
          </div>

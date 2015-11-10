@@ -1,7 +1,6 @@
 <?
 include('./compteur.php');
 $last = '19700101';
-$ordreTri = $_POST['ordreTri'];
 $dbLangue = 'MoviesFR';
 
 if($Portail == 'all_movies'){
@@ -24,7 +23,7 @@ GROUP BY $dbLangue.id
 ORDER BY annee, mois, jour LIMIT 5;";
 
 $sth = $dbh->prepare($query);
-//$sth->bindParam(':nameMovies', $_REQUEST['requete'], PDO::PARAM_STR, 20);
+//$sth->bindParam(':nameMovies', $_GET['requete'], PDO::PARAM_STR, 20);
 $sth->execute();
 while ($obj = $sth->fetch(PDO::FETCH_OBJ)) {
     ?>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<?php  
+			$Portail = 'Star Wars';
 		$headTitle = 'Supagog.com - Univers Star Wars';
 		$headDescritpion = '';
 		$headAuthor = '';
@@ -16,7 +17,7 @@
 
 		<?php
 			$mainStyle = "starwars";  
-			$placeHolderHeader = "C3PO, que puis-je pour vous?";
+			$placeHolderHeader = array("C3PO, que puis-je pour vous?");
 			$directory = './img/dsn/logos/starwars/';
 			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
 			include('./header.php');

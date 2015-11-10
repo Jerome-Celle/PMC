@@ -1,4 +1,5 @@
 <?php
+include('./compteur.php');
 if (isset($_GET['q'])) {
 
     $requete = $_GET['q'];
@@ -64,12 +65,12 @@ if (isset($_GET['q'])) {
                 <div class="row">
                     <h6 id="datemov"><em><?php echo $obj->dateSortie?></em></h6>
                 </div>
-                <div id="<?php echo 'cpt_' . $obj->name ?>" class="row">
+                <div id="<?php echo 'cpt_' . $obj->name ?>" class="row">                
+                    <?php affiche($obj->annee, $obj->mois, $obj->jour);?>
                 </div>
             </div>
-            <script>affiche("<?php echo $obj->annee?>","<?php echo $obj->mois?>","<?php echo $obj->jour?>", "<?php echo 'div#' . 'cpt_' . $obj->name ?>");</script>                        
         </div>
-        <?php    
+    <?php    
     }
 }
 ?>

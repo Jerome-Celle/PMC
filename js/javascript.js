@@ -149,6 +149,7 @@ function showHint() {
         });
     }
 }
+//rempalcé par l'equivalent en php
 function affiche(p_annee, p_mois, p_jour, idDiv) {
     var listeMois = [[31,29,31,30,31,30,31,31,30,31,30,31],
     [31,28,31,30,31,30,31,31,30,31,30,31],

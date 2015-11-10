@@ -1,4 +1,5 @@
 <?
+include('./compteur.php');
 $last = '19700101';
 $ordreTri = $_POST['ordreTri'];
 $dbLangue = 'MoviesFR';
@@ -35,10 +36,11 @@ while ($obj = $sth->fetch(PDO::FETCH_OBJ)) {
             <div class="row">
                 <h6 id="datemov"><em><?php echo $obj->dateSortie?></em></h6>
             </div>
-            <div id="<?php echo $obj->name ?>" class="row">
+            <div id="<?php echo $obj->name ?>" class="row">              
+                    <?php affiche($obj->annee, $obj->mois, $obj->jour);?>
             </div>
         </div>
-        <script>affiche("<?php echo $obj->annee?>","<?php echo $obj->mois?>","<?php echo $obj->jour?>", "<?php echo 'div#' . $obj->name ?>");</script>                        
+        
     </div>
     <?php    
 }

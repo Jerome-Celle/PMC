@@ -5,7 +5,6 @@
 		$colorPortail = '#604581';
 		$headTitle = 'Supagog.com';
 		$headDescritpion = '';
-		$headAuthor = '';
 		include('./head.php'); 
 	?>
 

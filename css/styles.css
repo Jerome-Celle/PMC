@@ -130,11 +130,11 @@ li#menuabout p a{
 #c_menu_info{
 	position:absolute;
 	top: 12px;
-	left: 12px;	
+	left: 12px;
+	cursor: pointer;
 }
 
 .c-menu__close {
-	text-align: right;
   background-color: #252525;
   font-size: 14px;
   border: none;
@@ -203,7 +203,11 @@ body.has-active-menu {
 .c-menu--slide-left .c-menu__close {
   display: block;
   padding: 12px 24px;
-  width: 100%;
+  width: 25px;
+  margin-left: auto;
+  text-align: right;
+  margin-right: 12px;
+  
 }
 
 .c-menu--slide-left {

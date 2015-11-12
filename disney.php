@@ -5,7 +5,6 @@
 		$colorPortail = '#1EAEDB'; 
 		$headTitle = 'Supagog.com - Univers Disney';
 		$headDescritpion = '';
-		$headAuthor = '';
 		include('./head.php'); 
 	?>
 	<body>

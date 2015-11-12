@@ -5,7 +5,6 @@
 		$colorPortail = '#2D447A'; 
 		$headTitle = 'Supagog.com - Univers DC Comics';
 		$headDescritpion = '';
-		$headAuthor = '';
 		include('./head.php'); 
 	?>
 	<body>

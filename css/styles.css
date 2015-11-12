@@ -377,6 +377,20 @@ table{
 	text-shadow: 0 0 7px rgba(0,0,0, 0.9);
 }
 
+/* NOT FOUND */
+
+#notfound{
+	text-align: center;
+	color: #868686;
+	margin-top: 50px;
+	margin-bottom: 50px;	
+}
+
+#notfound a{
+	text-decoration: underline;
+	color: #adadad;
+}
+
 /* PAGE PROPOSITIONS FILMS */
 
 body#proposit{

@@ -5,7 +5,6 @@
 		$colorPortail = '#1E242A'; 
 		$headTitle = 'Supagog.com - Univers Star Wars';
 		$headDescritpion = '';
-		$headAuthor = '';
 		include('./head.php'); 
 	?>
 	<body>

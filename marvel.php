@@ -5,7 +5,6 @@
 		$colorPortail = '#BE0F1E'; 
 		$headTitle = 'Supagog.com - Univers Marvel';
 		$headDescritpion = '';
-		$headAuthor = '';
 		include('./head.php'); 
 	?>
 	<body>

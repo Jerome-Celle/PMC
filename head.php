@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title><?php echo $headTitle ?></title>
 	<meta name="description" content="<?php echo $headDescritpion ?>">
-	<meta name="author" content="<?php echo $headAuthor ?>">
+	<link type="text/plain" rel="author" href="http://supagog.com/humans.txt" />
 
 	<!-- Mobile Specific Metas
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->

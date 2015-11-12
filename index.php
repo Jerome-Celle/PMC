@@ -28,7 +28,16 @@
 			include('./firstSearch.php');
 			?>
 		</div>
-
+		<div id="notfound">
+			<div class="container">
+				<div class="row">
+					<div class="twelve columns">
+						<h3>Tu n'as pas trouvé le film que tu recherches ?</h3>
+						<p> Essayes une autre recherche ou envoie nous ta proposition d'ajout sur <a href="" alt="Proposition film">cette page</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php include('./navbar.php') ?>
 
 		<div id='randomCercle'>                  

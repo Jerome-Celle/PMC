@@ -398,9 +398,60 @@ table{
 /* PAGE PROPOSITIONS FILMS */
 
 body#proposit{
-background: #604581;
-height: 100%; }
+height: 100%; 
+text-align: center;
+}
 
+#proposit h6{
+	color: #fff;
+	font-size: 25px;  
+	letter-spacing: 4px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+#proposit p{
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+
+#proposit form label{
+text-align: left;
+color: #fff;
+}
+
+#proposit input{
+background: #4c4c4c;
+border: none;
+color: #ffffff;
+}
+
+#proposit input::-webkit-input-placeholder {
+   color: #595959;
+}
+
+#proposit input:-moz-placeholder { /* Firefox 18- */
+   color: #595959;  
+}
+
+#proposit input::-moz-placeholder {  /* Firefox 19+ */
+   color: #595959;  
+}
+
+#proposit input:-ms-input-placeholder {  
+   color: #595959;  
+}
+
+#proposit input.movieSub{
+	background: #604581;
+	margin-top: 25px;
+}
+
+#proposit input.movieSub:hover{
+	background: #4c4c4c;
+	margin-top: 25px;
+	}
 
 /* ANIMATE */
 .hidden{

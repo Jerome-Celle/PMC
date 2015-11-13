@@ -6,6 +6,7 @@
 	<title><?php echo $headTitle ?></title>
 	<meta name="description" content="<?php echo $headDescritpion ?>">
 	<link type="text/plain" rel="author" href="http://supagog.com/humans.txt" />
+	<meta name="robots" content="noindex, nofollow">
 
 	<!-- Mobile Specific Metas
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->

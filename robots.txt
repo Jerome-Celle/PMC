@@ -1,0 +1,12 @@
+/* TEAM */
+	Concept and Design: Teddy Voisin
+	Twitter: @MrNokte
+	From:Lille, France
+
+	Developement: Jerome Celle
+	Twitter: @jeffy38130
+	From:Grenoble, France
+
+/* SITE */
+	Last update:2015/01/12
+	Language: French

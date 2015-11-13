@@ -31,7 +31,7 @@
             <a href="starwars.php" class="c-menu__link">Univers Star Wars</a>
         </li>
         <li class="c-menu__item" id="menupropos">
-            <a href="Proposer-film.php" class="c-menu__link">Proposer un film</a>
+            <a href="proposer-film.php" class="c-menu__link">Proposer un film</a>
         </li>
 
     </ul>

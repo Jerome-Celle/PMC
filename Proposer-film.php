@@ -3,11 +3,10 @@
 	<?php 
 		$headTitle = 'Supagog.com - Proposer un film';
 		$headDescritpion = '';
-		include('./head.php'); 
-		include('./head.php'); ?>
+		include('./php/head.php'); ?>
 
 	<body id="proposit">
-			<?php include('./loader.php'); ?>
+			<?php include('./php/loader.php'); ?>
 
 		<div id="o-wrapper" class="o-wrapper">
 				<div  class="container">
@@ -59,7 +58,7 @@
 				</form>	
 		</div>
 
-		<?php include('./navbar.php') ?>
+		<?php include('./php/navbar.php') ?>
 
 		<script type="text/javascript" src="./js/menu.js"></script>
 	</body>

@@ -1,0 +1,28 @@
+body{
+	background-color: #604581;
+	text-align: center;
+}
+
+td#compt{
+	font-size: 50x;
+	font-weight: 400;
+	color: #fff;
+		text-align: center;
+}
+
+td#label{
+	font-size: 5px;
+	font-weight: 200;
+	color: #FFF;
+		text-align: center;
+}
+
+table{
+    margin-left:auto; 
+    margin-right:auto;
+    table-layout: fixed;
+}
+
+#tlab{
+	padding-top: -100px !important;
+}

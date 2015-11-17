@@ -14,7 +14,7 @@ $placeholder = $placeholder . ', ' . $titre;
 $index = rand(0,sizeOf($arrayTitre)-1);
 $titre = $arrayTitre[$index];
 array_splice($arrayTitre, $index, 1);
-$placeholder = $placeholder . ', ' . $titre . ', ...';
+$placeholder = $placeholder . ', ' . $titre . ', etc...';
 ?>
 <div id="o-wrapper" class="o-wrapper">
    <div id="header" class="<?php echo $mainStyle?>">

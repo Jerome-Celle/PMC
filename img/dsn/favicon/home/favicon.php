@@ -6,11 +6,11 @@
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://www.supagog.comapple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://www.supagog.comapple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://www.supagog.comapple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="http://www.supagog.comfavicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="http://www.supagog.comfavicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="http://www.supagog.comfavicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="http://www.supagog.comfavicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="http://www.supagog.comfavicon-128.png" sizes="128x128" />
+<link rel="icon" type="image/png" href="http://www.supagog.com/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="http://www.supagog.com/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://www.supagog.com/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://www.supagog.com/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="http://www.supagog.com/favicon-128.png" sizes="128x128" />
 <meta name="application-name" content="Supagog.com"/>
 <meta name="msapplication-TileColor" content="#604581" />
 <meta name="msapplication-TileImage" content="http://www.supagog.commstile-144x144.png" />

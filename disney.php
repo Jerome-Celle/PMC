@@ -5,7 +5,8 @@
 		$colorPortail = '#1EAEDB'; 
 		$headTitle = 'Supagog.com - Univers Disney';
 		$headDescritpion = '';
-		include('./head.php'); 
+		$folderFavicon = 'img/dsn/favicon/disney/';
+		include('./php/head.php'); 
 	?>
 	<body>
 
@@ -14,32 +15,23 @@
 		</script>
 
 
-		<?php include('./loader.php'); ?>
+		<?php include('./php/loader.php'); ?>
 		<?php
 			$mainStyle = "disney";		 
 			$placeHolderHeader = array("Que cherchez-vous?");
 			$directory = './img/dsn/logos/disney/';
 			$imageHeader = array_diff(scandir($directory,1), array('..', '.'));
-			include('./header.php');
+			include('./php/header.php');
 		?>
 
 		<div id="PMC_searchresults">
 			<?php
 			$Portail = 'Disney';
-			include('./firstSearch.php');
+			include('./php/firstSearch.php');
 			?>
 		</div>
-		<div id="notfound">
-			<div class="container">
-				<div class="row">
-					<div class="twelve columns">
-						<h3>Tu n'as pas trouvé le film que tu recherches ?</h3>
-						<p> Essayes une autre recherche ou envoie nous ta proposition d'ajout sur <a href="proposer-film.php" alt="Proposition film">cette page</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<?php include('navbar.php') ?>
+		
+		<?php include('php/navbar.php') ?>
 
 		<!-- End Document
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->

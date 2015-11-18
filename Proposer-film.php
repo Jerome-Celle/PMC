@@ -72,6 +72,7 @@
 			"CC: somebodyelse@example.com";
 
 			mail($to,$subject,$txt,$headers);
+			header('Location: proposer-film.php');
 			?>
 			
 			<div id="formvalid">

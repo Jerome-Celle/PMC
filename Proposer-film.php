@@ -30,7 +30,7 @@
 					</p>
 				</div>
 				</div>
-				<form action='' method='POST'>
+				<form action='' method='POST' id='formProposition'>
 				<div class="row">
 					<div class="six columns">
 						<label for="emailInput">Email *</label>
@@ -62,12 +62,6 @@
 					</div>
 				</div>	
 				</form>
-				<div id="formvalid">
-					<p style="margin-top: 1rem;">Votre message a bien été envoyé. Votre proposition de film sera traitée dans les meilleurs délais.</p>
-			</div>
-
-		</div>
-		<?php include('./php/navbar.php') ?>
 
 		<?php
 		if(isset($_POST['emailInput']) && isset($_POST['movieTitle'])){
@@ -79,12 +73,21 @@
 
 			mail($to,$subject,$txt,$headers);
 			?>
+			
 			<div id="formvalid">
 					<p style="margin-top: 1rem;">Votre message a bien été envoyé. Votre proposition de film sera traitée dans les meilleurs délais.</p>
 			</div>
+			<script type="text/javascript">
+				$("#formvalid").delay(4000).fadeOut(3000);
+				$('#formProposition')[0].reset();
+			</script>
 			<?php
-		}
-		?>
+		} 
+			?>
+
+		</div>
+		<?php include('./php/navbar.php') ?>
+
 
 		<script type="text/javascript" src="./js/menu.js"></script>
 	</body>

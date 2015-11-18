@@ -3,7 +3,7 @@
 	<?php  
 			$Portail = 'Disney';
 		$colorPortail = '#1EAEDB'; 
-		$headTitle = 'Supagog.com - Univers Disney';
+		$headTitle = 'Supagog.com - Univers Disney / Pixar';
 		$headDescritpion = '';
 		$folderFavicon = 'img/dsn/favicon/disney/';
 		include('./php/head.php'); 

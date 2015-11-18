@@ -3,6 +3,7 @@
 	<?php 
 		$headTitle = 'Supagog.com - Proposer un film';
 		$headDescritpion = '';
+		$folderFavicon = 'img/dsn/favicon/home/';
 		include('./php/head.php'); ?>
 
 	<body id="proposit">
@@ -24,7 +25,7 @@
 				
 				<div class="row">
 				<div class="twelve columns">
-					<p style="color:#ffffff; font-weight: 300;">
+					<p style="color:#ffffff; font-weight: 300; margin-bottom: 25px;">
 						Sur Supagog.com nous tentons de vous tenir informé des dates de sorties des films que vous attendez. Pour nous aider dans notre mission, vous pouvez nous proposer des films grâce à ce formulaire. Notre équipe ajoutera vos propositions à notre base de données.					
 					</p>
 				</div>
@@ -32,11 +33,11 @@
 				<form action='' method='POST'>
 				<div class="row">
 					<div class="six columns">
-						<label for="emailInput">Email</label>
-						<input class="u-full-width" type="email" placeholder="bruce@wayne-enterprise.com" id="emailInput" name="emailInput" required>
+						<label for="emailInput">Email *</label>
+						<input class="u-full-width" type="email" placeholder="bruce@wayne-enterprises.com" id="emailInput" name="emailInput" required>
 					</div>
 					<div class="six columns">
-						<label for="movieTitle">Titre du film</label>
+						<label for="movieTitle">Titre du film *</label>
 						<input type="text" class="u-full-width" id="movieTitle" name="movieTitle" required></textarea>
 					</div>
 				</div>
@@ -51,13 +52,21 @@
 					</div>
 				</div>
 				<div class="row">
+					<div class="three columns">
+						<p style="color:#ffffff; font-weight: 300; text-align: left;"><em>* Champs obligatoires</em></p>					
+					</div>
+				</div>		
+				<div class="row">
 					<div class="twelve columns">
 					<input class="movieSub" type="submit" value="Envoyer">						
 					</div>
-				</div>		
-				</form>	
-		</div>
+				</div>	
+				</form>
+				<div id="formvalid">
+					<p style="margin-top: 1rem;">Votre message a bien été envoyé. Votre proposition de film sera traitée dans les meilleurs délais.</p>
+			</div>
 
+		</div>
 		<?php include('./php/navbar.php') ?>
 
 		<?php
@@ -70,8 +79,8 @@
 
 			mail($to,$subject,$txt,$headers);
 			?>
-			<div>
-				Mail envoyé
+			<div id="formvalid">
+					<p style="margin-top: 1rem;">Votre message a bien été envoyé. Votre proposition de film sera traitée dans les meilleurs délais.</p>
 			</div>
 			<?php
 		}

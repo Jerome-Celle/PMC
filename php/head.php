@@ -25,11 +25,11 @@
 
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css" />
-	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
 
 	<!-- JS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -49,6 +49,7 @@
 	<script type="text/javascript" src="./EasterEggs/Matrix/matrix.js"></script>
 	<script type="text/javascript" src="./EasterEggs/R2D2Sound/R2D2sound.js"></script>
 	<script type="text/javascript" src="./EasterEggs/C3POSound/C3POSound.js"></script>
+
 	
 	<!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->

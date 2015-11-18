@@ -4,7 +4,7 @@
 			$Portail = 'Star Wars';
 		$colorPortail = '#1E242A'; 
 		$headTitle = 'Supagog.com - Univers Star Wars';
-		$folderFavicon = 'img/dsn/favicon/sw/';
+		$folderFavicon = 'img/dsn/favicon/starwars/';
 		$headDescritpion = '';
 		include('./php/head.php'); 
 	?>
